@@ -1,2 +1,109 @@
-<h1>あとでVScodeで書く</h1>
-<h2>次の一行</h2>
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>nakayamaayako's portfolio site | TOP</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="/favicon.ico">
+        <link rel="stylesheet" href="css/style.css">
+        <script type="text/javascript" src="js/script.js" defer></script>
+    </head>
+    <body>
+                <!-- ハンバーガーメニューアイコン -->
+                <div id="hamburger" class="hamburger">
+                    <span style="margin-top:6px;"></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <!-- ハンバーガーメニュー -->
+                <nav id="menu-sp" class="menu-sp">
+                    <ul>
+                        <li><a href="index.html">TOP</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="works.html">Works</a></li>
+                    </ul>
+                </nav>
+        <header class="logo">
+            <h1>
+                <a href="index.html">
+                    <img class="pc" src="img/logo.svg" alt="Logo">
+                    <img class="sp" src="img/logo-sp.svg" alt="Logo SP">
+                </a>
+            </h1>
+            
+        </header>
+
+        <main>
+            <div class="top" style="display: flex; justify-content: flex-end;">
+            </div>
+            <div>
+                <nav>
+                    <ul class="menu pc">
+                        <div>
+                            <li>
+                                <a href="index.html">
+                                    <span class="d-top">TOP</span>
+                                    <img class="d-logo" style="height:100%;" src="img/logo.svg" alt="Logo">
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li><a href="#profile">Profile</a></li>
+                            <li><a href="works.html">Works</a></li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+            <div id="profile" class="profile">
+                <div class="pr-l">
+                    <h2>Profile</h2>
+                </div>
+                <div class="pr-r">
+                </div>
+            </div>
+            <div id="works" class="works">
+                <h2>Works</h2>
+            </div>
+            <div class="thanks">
+                <h2>Thanks</h2>
+            </div>
+        </main>
+        <footer>
+            <p>ⓒ 2024 nakayamaayako</p>
+        </footer>
+    </body>
+</html>
+
+<script>
+    window.addEventListener('scroll', function () {
+    const logoElements = document.querySelectorAll('.logo'); // logoクラスを持つすべての要素を取得
+
+    // スクロール位置によってクラスを付与・削除
+    logoElements.forEach(function(logoElement) {
+        if (window.scrollY > 700) {
+            logoElement.classList.add('d-none');
+            logoElement.classList.remove('to-top');
+        } else if (window.scrollY > 200) {
+            logoElement.classList.add('to-top');
+            logoElement.classList.remove('d-none');
+        } else {
+            logoElement.classList.remove('to-top');
+            logoElement.classList.remove('d-none');
+        }
+    });
+});
+
+window.addEventListener('scroll', function() {
+    const menuElements = document.querySelectorAll('.menu'); 
+
+    menuElements.forEach(function(menuElement) {
+        if (window.scrollY > 700) {
+            menuElement.classList.add('to-top');
+        } else {
+            menuElement.classList.remove('to-top');
+        }
+    });
+});
+
+
+</script>
