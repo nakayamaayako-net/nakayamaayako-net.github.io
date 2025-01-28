@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Calisto MT', -apple-system,Segoe UI,Helvetica Neue,Hiragino Kaku Gothic ProN,"メイリオ",meiryo,sans-serif;
+    font-family: 'Noto Serif JP', serif;
 }
 html,
 body{
@@ -14,6 +15,11 @@ body{
     scroll-behavior: smooth;
     background: #f0d8d8;
     color: #e6004d;
+    animation: fadein 1s forwards;
+}
+@keyframes fadein {
+	0% {opacity: 0.5}
+	100% {opacity: 1}
 }
 body{
     width: 85%;
@@ -26,7 +32,7 @@ li{
 a{
     color: #e6004d;
     font-weight: bold;
-    text-decoration: none;
+    /* text-decoration: none; */
 }
 header{
     display: inline-block;
@@ -43,7 +49,7 @@ header{
 }
 .logo.to-top{
     width: 10%;
-    padding-top: 46px;
+    padding-top: 52px;
     padding-left: 20px;
     z-index: 11;
     transition: 0.5s;
@@ -76,6 +82,7 @@ header,
 nav ul{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 nav ul{
     /* justify-content: space-around; */
@@ -88,10 +95,10 @@ nav ul{
 .menu div{
     display: flex;
 }
-.menu div:nth-child(2){
+/* .menu div:nth-child(2){
     width: 20%;
     justify-content: space-between;
-}
+} */
 /* ハンバーガーメニューアイコン */
 .hamburger {
     display: none; /* PC画面では非表示 */
@@ -155,9 +162,12 @@ nav ul{
 }
 
 .menu-sp a {
-    text-decoration: none;
+    /* text-decoration: none; */
     color: #e6004d;
     font-size: 24px;
+}
+.menu .wide li{
+    font-size: 30px;
 }
 .d-logo{
     display: none;
@@ -174,23 +184,40 @@ nav ul{
     font-size: 22px;
     padding: 10px;
 }
-.profile{
+.profile,
+.kl-wrap{
     display: flex;
     justify-content: space-between;
+    background-color: #f0d8d8;
 }
 .profile,
 .works,
 .thanks{
     width: 100%;
-    padding-top: 100px;
+    padding-top: 170px;
+    background-color: #f0d8d8;
+    /* height: 1800px; */
+}
+.thanks{
     height: 1800px;
 }
 .works-main div{
     padding-top: 150px;
     height: 1800px;
 }
+.wide{
+    transform: scale(1,0.6);
+}
+.tall{
+    transform: scale(1.7,1);
+}
+.tall li{
+    margin-right: 30px;
+}
 .pr-l,
-.pr-r{
+.pr-r,
+.kl-l,
+.kl-r{
     width: 45%;
 }
 /* .works-main{
@@ -202,8 +229,73 @@ nav ul{
 .thanks h2,
 .works-main h2{
     font-size: 50px;
-    padding-left: 40px;
+    /* padding-left: 40px; */
 }
+.pr-r .wide{
+    font-size: 85px;
+    line-height: 1em;
+    letter-spacing: -0.2em;
+    font-weight: bold;
+}
+.skill{
+    position: relative;
+    margin-top: 60px;
+    text-align: center;
+}
+.skill h3{
+    position: absolute;
+    top: -70px;
+    margin-left: 20px;
+    font-size: 90px;
+    opacity: 0.3;
+}
+.kl-wrap{
+    background-color: #FFF;
+    border-radius: 20px;
+    padding: 40px;
+}
+.kl-wrap h4{
+    font-size: 30px;
+}
+/* スキル全体を囲うdiv */
+.skills {
+    margin: 0; /* 上下のマージンを指定 */
+  }
+  
+  /* スキルの情報 */
+  .skill-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 1.5;
+    /* margin-bottom: 10px; */
+  }
+  
+  /* スキルの熟練度（パーセンテージ） */
+  .skill-percentage {
+    opacity: 0; /* 初期状態では透明に */
+    transition: opacity 0.6s;
+  }
+  
+  /* スキルバーの親要素 */
+  .skill-bar-container {
+    position: relative;
+    width: 100%;
+    height: 15px; /* スキルバーの高さ */
+    background-color: #f3f3f3; /* スキルバーの背景色 */
+    overflow: hidden;
+  }
+  
+  /* スキルバー本体 */
+  .skill-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0; /* 初期状態では0 */
+    background-color: #e6004d; /* スキルバーの色 */
+    transition: width 3s cubic-bezier(0.22, 1, 0.36, 1); /* スキルバーが伸びる速度を調整 */
+  }
 footer{
     font-size: 20px;
     padding: 30px;
@@ -222,11 +314,31 @@ footer{
         display: none!important;
     } */
     .sp,
-    .menu.sp{
+    .menu.sp,
+    .profile,
+    .kl-wrap,
+    .works,
+    .thanks{
         display: block;
     }
+    .pr-l,
+    .pr-r,
+    .kl-l,
+    .kl-r{
+        width: 100%;
+    }
+    .kl-l{
+        margin-bottom: 20px;
+    }
+    .pr-r .wide{
+        font-size: 70px;
+    }
+
     .pc{
         display: none;
+    }
+    header{
+        padding-left: 0;
     }
     nav ul{
         padding: 20px 0;
@@ -257,5 +369,8 @@ footer{
 
     .menu.pc {
         display: none;
+    }
+    .tall li{
+        margin-right: 0;
     }
 }
