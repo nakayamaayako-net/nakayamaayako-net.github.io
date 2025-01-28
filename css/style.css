@@ -331,9 +331,11 @@ footer{
         margin-bottom: 20px;
     }
     .pr-r .wide{
-        font-size: 70px;
+        font-size: 64px;
     }
-
+    .pr-r p{
+        font-size: 90%;
+    }
     .pc{
         display: none;
     }
@@ -361,6 +363,7 @@ footer{
         padding-top: 36px;
         padding-left: 0;
         z-index: 11;
+        background-color: #f0d8d8;
     }
     .hamburger {
         display: flex;
