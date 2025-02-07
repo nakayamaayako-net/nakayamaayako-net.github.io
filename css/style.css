@@ -197,12 +197,9 @@ nav ul{
 .works,
 .thanks{
     width: 100%;
-    padding-top: 170px;
+    margin-top: 170px;
     background-color: #f0d8d8;
     /* height: 1800px; */
-}
-.thanks{
-    height: 1800px;
 }
 .works-main div{
     padding-top: 150px;
@@ -234,7 +231,8 @@ nav ul{
     font-size: 50px;
     /* padding-left: 40px; */
 }
-.pr-r .wide{
+.pr-r .wide,
+.thanks .wide{
     font-size: 85px;
     line-height: 1em;
     letter-spacing: -0.2em;
@@ -243,7 +241,7 @@ nav ul{
 .skill{
     position: relative;
     text-align: center;
-    margin-bottom: 200px;
+    margin-bottom: 400px;
 }
 .skill h3,
 .works h3{
@@ -252,16 +250,17 @@ nav ul{
     margin-bottom: -70px;
     text-align: center;
 }
-.works h4{
+.tab__panel-text h4{
     font-size: 160%;
     font-family: Noto Sans JP , Source Han San , 源ノ角ゴシック;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 .works img{
     width: 72%;
     /* border: 2px solid; */
 }
-.kl-wrap{
+.kl-wrap,
+.thanks{
     background-color: #FFF;
     border-radius: 20px;
     padding: 40px;
@@ -338,7 +337,14 @@ nav ul{
     cursor: pointer;
     transition: all .3s; /* アニメーション */
   }
-  
+  .graphic .tab__menu-item{
+    width: 23%;
+    font-size: 90%;
+  }
+  .graphic .tab__menu-item.is-active{
+    width: 30%;
+    font-size: 110%;
+  }
   .tab__menu-item:last-of-type {
     margin-right: 0px;
   }
@@ -363,10 +369,14 @@ nav ul{
     width: 100%;
     box-shadow: 0 2px 10px #fa6e9d;
 }
+.graphic .tab__panel-box img{
+    box-shadow: none;
+}
 
    .tab__panel-box001,
    .tab__panel-box002,
-   .tab__panel-box003 {
+   .tab__panel-box003,
+   .tab__panel-box004 {
      display: none;
    }
 
@@ -378,15 +388,20 @@ nav ul{
 .tab__panel-text{
     width: 25%;
 }
+.tab__panel-text p{
+    font-size: 105%;
+}
 .w-cat-wrap{
+    margin: 10px 0;
+}
+.w-cat-wrap >div{
     display: flex;
-    margin-top: 10px;
 }
 .w-cat{
     color: #FFF;
     font-weight: bold;
     background-color: #e6004d;
-    padding: 10px 40px;
+    padding: 7px 20px;
     border-radius: 50px;
     font-family: Noto Sans JP , Source Han San , 源ノ角ゴシック;
 }
@@ -400,14 +415,70 @@ nav ul{
     font-family: Noto Sans JP , Source Han San , 源ノ角ゴシック;
     margin: 10px;
 }
-.w-cat.des{
-    margin-right: 20px;
-}
 .w-cat.des.ils{
     background-color: #ff8c00;
 }
 .w-cat.des.xd{
     background-color: #d633be;
+}
+a.w-cat {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+a.w-cat img{
+    margin-right: 7px;
+    box-shadow: none;
+}
+/* スライダ― */
+.swiper {
+    width: 73%;
+    /* max-width: 800px; */
+    padding: 20px 0;
+    height: 570px;
+    margin: 0!important;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+}
+.swiper-slide p{
+    color: #FFF;
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color: #e6004d;
+    border-radius: 30px;
+    display: inline;
+}
+
+.swiper-slide img {
+    height: 500px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    object-fit: contain;
+}
+.swiper-button-next, .swiper-button-prev {
+    color: #e6004d!important;
+}
+.swiper-pagination-bullet-active{
+    background-color: #e6004d!important;
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+    bottom: 40px!important;
+}
+
+/* .swiper-slide img:hover {
+    transform: scale(1.05);
+} */
+
+.thanks{
+    margin-bottom: 1000px;
+    text-align: center;
 }
 footer{
     font-size: 20px;
@@ -421,6 +492,16 @@ footer{
 .menu-sp{
     display: none;
 }
+.frame-in {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.frame-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 @media screen and (max-width:1370px){
     .tab__panel-box.is-show{
@@ -430,9 +511,21 @@ footer{
     .tab__panel-text{
         width: 100%;
     }
-    .works h4{
-        margin: 8px 0 25px 0;
+    .w-cat-wrap{
+        display: flex;
+        justify-content: space-between;
     }
+    br.pc{
+        display: none;
+    }
+    .swiper{
+        width: 100%;
+        height: 400px;
+    }
+    .swiper-slide img{
+        height: 350px;
+    }
+
 }
 @media screen and (max-width:768px) {
     /* .menu-sp{
@@ -495,19 +588,30 @@ footer{
         display: flex;
         position: fixed;
     }
-
+    .works h4{
+        display: none;
+    }
     .menu.pc {
         display: none;
     }
     .tall li{
         margin-right: 0;
     }
-    .tab__menu{
-        /* display: flex; */
+    .tab__menu,
+    .graphic .tab__menu{
+        display: block;
         width: 100%;
         margin: 0;
     }
-    .tab__menu-item {
+    .tab__menu-item,
+    .graphic .tab__menu-item {
         margin-bottom: 10px;
+        width: 100%;
+        padding: 5px;
+    }
+    .tab__menu-item.is-active,
+    .graphic .tab__menu-item.is-active{
+        width: 100%;
+        padding: 10px;
     }
 }
