@@ -3,10 +3,10 @@
     <head>
         <meta charset="utf-8">
         <title>nakayamaayako's portfolio site | TOP</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="img/favicon.ico">
         <link rel="stylesheet" href="css/style.css">
-        <script type="text/javascript" src="js/script.js" defer></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     </head>
     <body>
                 <!-- ハンバーガーメニューアイコン -->
@@ -53,9 +53,9 @@
                         </div> -->
                     </ul>
                 </nav>
-                <div id="profile"></div>
+                <div id="profile" ></div>
             </div>
-            <div class="profile">
+            <div class="profile frame-in">
                 <div class="pr-l">
                 </div>
                 <div class="pr-r">
@@ -71,7 +71,7 @@
                     </div>
                 </div>
             </div>
-            <div class="skill">
+            <div class="skill frame-in">
                 <h3 class="wide">SKILL</h3>
                 <div class="kl-wrap">    
                     <div class="kl-l">
@@ -185,16 +185,15 @@
                         </div>
                     </div>
                 </div>
-
             </div>
             <div id="works" class="works">
-              <div style="text-align: center;">
+              <div class="frame-in" style="text-align: center;">
                   <h3 class="wide">WORKS</h3>
                   <img style="margin-top: -50px;
                   margin-left: 250px;
                   width: 20%;" src="img/cat-1.svg">
               </div>
-              <div class="tab-wrap">
+              <div class="tab-wrap frame-in">
                     <div class="tab">
                       <ul class="tab__menu">
                         <li class="tab__menu-item is-active" data-tab="01">ひめゆり平和祈念資料館様</li>
@@ -203,28 +202,31 @@
                       </ul>
                       <div class="tab__panel">
                         <div class="tab__panel-box tab__panel-box001 is-show" data-panel="01">
-                          <a href="https://www.himeyuri.or.jp/" target="_blank" class=""><img src="img/works1.png"></a>
+                          <a href="https://www.himeyuri.or.jp/" target="_blank" class=""><img src="img/works1.png" class="pc"><img src="img/works1-sp.png" class="sp"></a>
                           <div class="tab__panel-text">
-                            <h4>ひめゆり平和祈念資料館さま<br class="sp">ホームページリニューアル</h4>
+                            
                             <div class="w-cat-wrap">
-                              <div style="height: 100%;">
-                                <!-- <p>デザイン</p> -->
-                                <a href="/" class="w-cat des ils">illustrator</a>
-                              </div>
+                              <h4>ひめゆり平和祈念資料館さま<br class="pc">ホームページリニューアル</h4>
                               <div>
-                                <!-- <p>CMS</p> -->
-                                <a href="https://www.himeyuri.or.jp/" target="_blank" class="w-cat cms wor">Wordpress</a>
+                                <div style="margin-right: 10px;">
+                                  <!-- <p>デザイン</p> -->
+                                  <a href="img/himeyuri_nakayama.pdf" class="w-cat des ils" target="_blank"><img src="img/design.svg" style="width: 30px;">illustrator</a>
+                                </div>
+                                <div>
+                                  <!-- <p>CMS</p> -->
+                                  <a href="https://www.himeyuri.or.jp/" target="_blank" class="w-cat cms wor"><img src="img/cms.svg" style="width: 30px;">Wordpress</a>
+                                </div>
                               </div>
                             </div>
-                            <p style="margin-top: 30px;">デザイン提案から携わる。受注に繋げた。
+                            <p>デザイン提案から携わる。受注に繋げた。
                               illustrator作成のデザイン案を２案作成し、ありがたいことにお客様側で票がまっぷたつに割れ、
                               トップページのみ２案同時作成。現状の案に。
-                              <br class="sp">
                               Wordpressで構築。
+                              <br>
                               <br>
                               社内繁忙期により９０％ほどの作業を担当。
                               お客様とのやり取りも担当。細かい修正や、不明点の確認などを積極的にし、
-                              見せ方や構成のご提案を重ねた結果満足いただけ、リリース後の修正なし。
+                              見せ方や構成のご提案を重ねた結果満足いただき、リリース後の修正なし。
                             </p>
                           </div>
                         </div>
@@ -232,19 +234,22 @@
                           <a href="https://okashigoten.com/" target="_blank" class="">
                           <img src="img/works2.png"></a>
                           <div class="tab__panel-text">
-                            <h4>御菓子御殿さま<br class="sp">ネットショップリニューアル</h4>
+                            
                             <div class="w-cat-wrap">
-                              <div style="height: 100%;">
-                                <!-- <p>デザイン</p> -->
-                                <a href="https://xd.adobe.com/view/3bd0db4d-5744-4664-be9d-ddfa6fc7b97e-6e83/" target="_blank" class="w-cat des xd">Adobe XD</a>
-                                <p style="font-size: 80%;">※デザイン案不採用</p>
-                              </div>
+                              <h4>御菓子御殿さま<br class="pc">ネットショップリニューアル</h4>
                               <div>
-                                <!-- <p>CMS</p> -->
-                                <a href="https://okashigoten.com/" target="_blank" class="w-cat cms wor">EC-CUBE</a>
+                                <div style="margin-right: 10px;">
+                                  <!-- <p>デザイン</p> -->
+                                  <a href="https://xd.adobe.com/view/3bd0db4d-5744-4664-be9d-ddfa6fc7b97e-6e83/" target="_blank" class="w-cat des xd"><img src="img/design.svg" style="width: 30px;">Adobe XD</a>
+                                  <p style="font-size: 80%;">※デザイン案不採用</p>
+                                </div>
+                                <div>
+                                  <!-- <p>CMS</p> -->
+                                  <a href="https://okashigoten.com/" target="_blank" class="w-cat cms wor"><img src="img/cms.svg" style="width: 30px;">EC-CUBE</a>
+                                </div>
                               </div>
                             </div>
-                            <p style="margin-top: 30px;">デザイン提案から携わる。受注に繋げた。
+                            <p>デザイン提案から携わる。受注に繋げた。
                               illustrator作成のデザイン案を２案作成し、ありがたいことにお客様側で票がまっぷたつに割れ、
                               トップページのみ２案同時作成。現状の案に。
                               <br>
@@ -260,19 +265,22 @@
                           <a href="jinjin/index.html" target="_blank" class="">
                             <img src="img/works3.png"></a>
                           <div class="tab__panel-text">
-                            <h4>自社サービス<br class="pc">「じんじんメール」LP</h4>
+                            
                             <div class="w-cat-wrap">
-                              <div style="height: 100%;">
-                                <!-- <p>デザイン</p> -->
-                                <a href="https://xd.adobe.com/view/45690cec-bfb8-4bce-92ba-1916311e1e9b-103a/" target="_blank" class="w-cat des xd">Adobe XD</a>
-                              </div>
+                              <h4>自社サービス<br class="pc">「じんじんメール」LP</h4>
                               <div>
-                                <!-- <p>CMS</p> -->
-                                <a href="jinjin/index.html" target="_blank" class="w-cat cms wor">HTML/CSS</a>
-                                <p style="font-size: 80%;">※未開発</p>
+                                <div style="margin-right: 10px;">
+                                  <!-- <p>デザイン</p> -->
+                                  <a href="https://xd.adobe.com/view/45690cec-bfb8-4bce-92ba-1916311e1e9b-103a/" target="_blank" class="w-cat des xd"><img src="img/design.svg" style="width: 30px;">Adobe XD</a>
+                                </div>
+                                <div>
+                                  <!-- <p>CMS</p> -->
+                                  <a href="jinjin/index.html" target="_blank" class="w-cat cms wor"><img src="img/cms.svg" style="width: 30px;">HTML/CSS</a>
+                                  <p style="font-size: 80%;">※未開発</p>
+                                </div>
                               </div>
                             </div>
-                            <p style="margin-top: 30px;">デザイン提案から携わる。受注に繋げた。
+                            <p>デザイン提案から携わる。受注に繋げた。
                               illustrator作成のデザイン案を２案作成し、ありがたいことにお客様側で票がまっぷたつに割れ、
                               トップページのみ２案同時作成。現状の案に。
                               <br>
@@ -289,37 +297,71 @@
                   </div>
                 </div>
 
-                <div class="tab-wrap">
+                <div class="works frame-in" style="text-align: center;">
+                  <h3 class="wide">WORKS</h3>
+                  <img style="margin-top: -10px;
+                  margin-left: 250px;
+                  width: 15%;" src="img/cat-2.svg">
+                </div>
+                <div class="tab-wrap frame-in graphic">
                   <div class="tab">
                     <ul class="tab__menu">
-                      <li class="tab__menu-item is-active" data-tab="01">ひめゆり平和祈念資料館様</li>
-                      <li class="tab__menu-item" data-tab="02">御菓子御殿様お取り寄せショップ</li>
-                      <li class="tab__menu-item" data-tab="03">自社サービス「じんじんメール」</li>
+                      <li class="tab__menu-item is-active" data-tab="01">珈琲専科LOOP 夏ギフト2021</li>
+                      <li class="tab__menu-item" data-tab="02">珈琲専科LOOP 珈琲豆ラベルデザイン</li>
+                      <li class="tab__menu-item" data-tab="03">酒と炭焼 きんべゑ 宴会メニュー等</li>
+                      <li class="tab__menu-item" data-tab="04">食品POP・カタログ</li>
                     </ul>
                     <div class="tab__panel">
                       <div class="tab__panel-box tab__panel-box001 is-show" data-panel="01">
-                        <a href="https://www.himeyuri.or.jp/" target="_blank" class=""><img src="img/works1.png"></a>
-                        <div class="tab__panel-text">
-                          <h4>ひめゆり平和祈念資料館さま<br class="sp">ホームページリニューアル</h4>
-                          <div class="w-cat-wrap">
-                            <div style="height: 100%;">
-                              <!-- <p>デザイン</p> -->
-                              <a href="/" class="w-cat des ils">illustrator</a>
-                            </div>
-                            <div>
-                              <!-- <p>CMS</p> -->
-                              <a href="https://www.himeyuri.or.jp/" target="_blank" class="w-cat cms wor">Wordpress</a>
-                            </div>
+                        
+                        <div class="swiper mySwiper">
+                          <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                  <img src="img/works4-1.png" alt="画像1">
+                                  <p>店頭用A4POP</p>
+                              </div>
+                              <div class="swiper-slide">
+                                  <img src="img/works4-2.png" alt="画像2">
+                                  <p>Instagram画像</p>
+                              </div>
+                              <div class="swiper-slide">
+                                  <img src="img/works4-3.png" alt="画像3">
+                                  <p>はがきサイズPOP</p>
+                              </div>
+                              <div class="swiper-slide">
+                                  <img src="img/works4-4.png" alt="画像4">
+                                  <p>店頭用A4POP</p>
+                              </div>
+                              <div class="swiper-slide">
+                                  <img src="img/works4-1.png" alt="画像5">
+                                  <p>店頭用A4POP</p>
+                              </div>
                           </div>
-                          <p style="margin-top: 30px;">デザイン提案から携わる。受注に繋げた。
+                  
+                          <!-- ナビゲーションボタン -->
+                          <div class="swiper-button-next"></div>
+                          <div class="swiper-button-prev"></div>
+                  
+                          <!-- ページネーション -->
+                          <div class="swiper-pagination"></div>
+                      </div>
+
+
+
+
+
+                        <div class="tab__panel-text">
+                          <h4>珈琲専科LOOP 夏ギフト2021</h4>
+
+                          <p>デザイン提案から携わる。受注に繋げた。
                             illustrator作成のデザイン案を２案作成し、ありがたいことにお客様側で票がまっぷたつに割れ、
                             トップページのみ２案同時作成。現状の案に。
-                            <br class="sp">
                             Wordpressで構築。
+                            <br>
                             <br>
                             社内繁忙期により９０％ほどの作業を担当。
                             お客様とのやり取りも担当。細かい修正や、不明点の確認などを積極的にし、
-                            見せ方や構成のご提案を重ねた結果満足いただけ、リリース後の修正なし。
+                            見せ方や構成のご提案を重ねた結果満足いただき、リリース後の修正なし。
                           </p>
                         </div>
                       </div>
@@ -327,19 +369,22 @@
                         <a href="https://okashigoten.com/" target="_blank" class="">
                         <img src="img/works2.png"></a>
                         <div class="tab__panel-text">
-                          <h4>御菓子御殿さま<br class="sp">ネットショップリニューアル</h4>
+                          
                           <div class="w-cat-wrap">
-                            <div style="height: 100%;">
-                              <!-- <p>デザイン</p> -->
-                              <a href="https://xd.adobe.com/view/3bd0db4d-5744-4664-be9d-ddfa6fc7b97e-6e83/" target="_blank" class="w-cat des xd">Adobe XD</a>
-                              <p style="font-size: 80%;">※デザイン案不採用</p>
-                            </div>
+                            <h4>御菓子御殿さま<br class="pc">ネットショップリニューアル</h4>
                             <div>
-                              <!-- <p>CMS</p> -->
-                              <a href="https://okashigoten.com/" target="_blank" class="w-cat cms wor">EC-CUBE</a>
+                              <div style="margin-right: 10px;">
+                                <!-- <p>デザイン</p> -->
+                                <a href="https://xd.adobe.com/view/3bd0db4d-5744-4664-be9d-ddfa6fc7b97e-6e83/" target="_blank" class="w-cat des xd"><img src="img/design.svg" style="width: 30px;">Adobe XD</a>
+                                <p style="font-size: 80%;">※デザイン案不採用</p>
+                              </div>
+                              <div>
+                                <!-- <p>CMS</p> -->
+                                <a href="https://okashigoten.com/" target="_blank" class="w-cat cms wor"><img src="img/cms.svg" style="width: 30px;">EC-CUBE</a>
+                              </div>
                             </div>
                           </div>
-                          <p style="margin-top: 30px;">デザイン提案から携わる。受注に繋げた。
+                          <p>デザイン提案から携わる。受注に繋げた。
                             illustrator作成のデザイン案を２案作成し、ありがたいことにお客様側で票がまっぷたつに割れ、
                             トップページのみ２案同時作成。現状の案に。
                             <br>
@@ -355,19 +400,53 @@
                         <a href="jinjin/index.html" target="_blank" class="">
                           <img src="img/works3.png"></a>
                         <div class="tab__panel-text">
-                          <h4>自社サービス<br class="pc">「じんじんメール」LP</h4>
+                          
                           <div class="w-cat-wrap">
-                            <div style="height: 100%;">
-                              <!-- <p>デザイン</p> -->
-                              <a href="https://xd.adobe.com/view/45690cec-bfb8-4bce-92ba-1916311e1e9b-103a/" target="_blank" class="w-cat des xd">Adobe XD</a>
-                            </div>
+                            <h4>自社サービス<br class="pc">「じんじんメール」LP</h4>
                             <div>
-                              <!-- <p>CMS</p> -->
-                              <a href="jinjin/index.html" target="_blank" class="w-cat cms wor">HTML/CSS</a>
-                              <p style="font-size: 80%;">※未開発</p>
+                              <div style="margin-right: 10px;">
+                                <!-- <p>デザイン</p> -->
+                                <a href="https://xd.adobe.com/view/45690cec-bfb8-4bce-92ba-1916311e1e9b-103a/" target="_blank" class="w-cat des xd"><img src="img/design.svg" style="width: 30px;">Adobe XD</a>
+                              </div>
+                              <div>
+                                <!-- <p>CMS</p> -->
+                                <a href="jinjin/index.html" target="_blank" class="w-cat cms wor"><img src="img/cms.svg" style="width: 30px;">HTML/CSS</a>
+                                <p style="font-size: 80%;">※未開発</p>
+                              </div>
                             </div>
                           </div>
-                          <p style="margin-top: 30px;">デザイン提案から携わる。受注に繋げた。
+                          <p>デザイン提案から携わる。受注に繋げた。
+                            illustrator作成のデザイン案を２案作成し、ありがたいことにお客様側で票がまっぷたつに割れ、
+                            トップページのみ２案同時作成。現状の案に。
+                            <br>
+                            Wordpressで構築。
+                            <br>
+                            社内繁忙期により９０％ほどの作業を担当。
+                            お客様とのやり取りも担当。細かい修正や、不明点の確認などを積極的にし、
+                            見せ方や構成のご提案を重ねた結果満足いただけ、リリース後の修正なし。
+                          </p>
+                        </div>
+                      </div>
+                      <div class="tab__panel-box tab__panel-box004" data-panel="04">
+                        <a href="jinjin/index.html" target="_blank" class="">
+                          <img src="img/works3.png"></a>
+                        <div class="tab__panel-text">
+                          
+                          <div class="w-cat-wrap">
+                            <h4>自社サービス<br class="pc">「じんじんメール」LP</h4>
+                            <div>
+                              <div style="margin-right: 10px;">
+                                <!-- <p>デザイン</p> -->
+                                <a href="https://xd.adobe.com/view/45690cec-bfb8-4bce-92ba-1916311e1e9b-103a/" target="_blank" class="w-cat des xd"><img src="img/design.svg" style="width: 30px;">Adobe XD</a>
+                              </div>
+                              <div>
+                                <!-- <p>CMS</p> -->
+                                <a href="jinjin/index.html" target="_blank" class="w-cat cms wor"><img src="img/cms.svg" style="width: 30px;">HTML/CSS</a>
+                                <p style="font-size: 80%;">※未開発</p>
+                              </div>
+                            </div>
+                          </div>
+                          <p>デザイン提案から携わる。受注に繋げた。
                             illustrator作成のデザイン案を２案作成し、ありがたいことにお客様側で票がまっぷたつに割れ、
                             トップページのみ２案同時作成。現状の案に。
                             <br>
@@ -382,15 +461,17 @@
                     </div>
                   </div>
                 </div>
-
+              </div>
 
             </div>
-            <div class="thanks">
-                <h2>ありがとうございました！</h2>
+            <div class="thanks frame-in">
+                <h2 class="wide">ありがとうございました！！！！</h2>
             </div>
         </main>
         <footer>
             <p>ⓒ 2024 nakayamaayako</p>
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script type="text/javascript" src="js/script.js" defer></script>
     </body>
 </html>
