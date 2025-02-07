@@ -170,3 +170,46 @@ function tabSwitch(e) {
 }
 
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const targets = document.querySelectorAll(".frame-in");
+
+  const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+              observer.unobserve(entry.target); // 1回だけ実行する場合
+          }
+      });
+  }, {
+      root: null,
+      rootMargin: "-100px",
+      threshold: 0.1 // 10%見えたら実行
+  });
+
+  targets.forEach(target => {
+      observer.observe(target);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const swiper = new Swiper(".mySwiper", {
+      loop: true, // 無限ループ
+      spaceBetween: 20, // スライド間のスペース
+      navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+      },
+      pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+      }
+  });
+
+  // 画像クリックイベント
+  document.querySelectorAll(".swiper-slide img").forEach(img => {
+      img.addEventListener("click", () => {
+          console.log(`クリックされた画像: ${img.src}`);
+      });
+  });
+});
