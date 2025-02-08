@@ -388,6 +388,9 @@ nav ul{
 .tab__panel-text{
     width: 25%;
 }
+.graphic .tab__panel-text{
+    width: 35%;
+}
 .tab__panel-text p{
     font-size: 105%;
 }
@@ -433,7 +436,7 @@ a.w-cat img{
 }
 /* スライダ― */
 .swiper {
-    width: 73%;
+    width: 60%;
     /* max-width: 800px; */
     padding: 20px 0;
     height: 570px;
