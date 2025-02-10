@@ -252,6 +252,10 @@ nav ul{
     margin-bottom: -70px;
     text-align: center;
 }
+.hello{
+	font-size: 120%;
+	line-height: 0.2em;
+}
 .tab__panel-text h4{
     font-size: 160%;
     font-family: Noto Sans JP , Source Han San , 源ノ角ゴシック;
