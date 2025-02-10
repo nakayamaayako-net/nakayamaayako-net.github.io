@@ -216,10 +216,12 @@ nav ul{
     margin-right: 30px;
 }
 .pr-l,
-.pr-r,
 .kl-l,
 .kl-r{
     width: 45%;
+}
+.pr-r{
+	width: 55%;
 }
 /* .works-main{
     padding-top: 150px;
