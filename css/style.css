@@ -280,6 +280,13 @@ nav ul{
 .kl-wrap h4{
     font-size: 30px;
 }
+.tags p{
+	color:#FFF;
+	font-weight: bold;
+	background:#e6004d;
+	padding: 10px;
+	border-radious: 30px;
+}
 /* スキル全体を囲うdiv */
 .skills {
     margin: 0; /* 上下のマージンを指定 */
