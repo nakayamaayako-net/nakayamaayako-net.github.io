@@ -282,13 +282,14 @@ nav ul{
 }
 .tags{
 	display:flex;
+	flex-wrap:wrap;
 }
-.tags p{
+.tags h5{
 	color:#FFF;
 	font-weight: bold;
 	background:#e6004d;
-	padding: 10px;
-	border-radious: 30px;
+	padding: 5px 20px;
+	border-radius: 30px;
 }
 /* スキル全体を囲うdiv */
 .skills {
