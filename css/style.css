@@ -232,7 +232,8 @@ nav ul{
     /* padding-left: 40px; */
 }
 .pr-r .wide,
-.thanks .wide{
+.thanks .wide,
+.hello .wide{
     font-size: 85px;
     line-height: 1em;
     letter-spacing: -0.2em;
