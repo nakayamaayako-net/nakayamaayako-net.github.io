@@ -290,6 +290,8 @@ nav ul{
 	background:#e6004d;
 	padding: 5px 20px;
 	border-radius: 30px;
+	margin-right: 5px;
+    margin-top: 11px;
 }
 /* スキル全体を囲うdiv */
 .skills {
