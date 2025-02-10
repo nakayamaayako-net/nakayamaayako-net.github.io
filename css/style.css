@@ -280,6 +280,9 @@ nav ul{
 .kl-wrap h4{
     font-size: 30px;
 }
+.tags{
+	display:flex;
+}
 .tags p{
 	color:#FFF;
 	font-weight: bold;
