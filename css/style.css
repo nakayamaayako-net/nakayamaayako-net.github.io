@@ -482,7 +482,8 @@ a.w-cat img{
     padding: 5px 10px;
     background-color: #e6004d;
     border-radius: 30px;
-    display: inline;
+    display: inline-block;
+    margin-top: 10px;
 }
 
 .swiper-slide img {
@@ -555,6 +556,9 @@ footer{
     }
     .swiper-slide img{
         height: 320px;
+    }
+    .swiper-slide p{
+        margin-top: 0;
     }
 
 }
