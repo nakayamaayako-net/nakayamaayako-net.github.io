@@ -193,6 +193,14 @@ nav ul{
     justify-content: space-between;
     background-color: #f0d8d8;
 }
+.profile{
+    position: relative;
+}
+.profile .ki1,
+.profile .ki2{
+    position: absolute;
+}
+
 .profile,
 .works,
 .hello,
