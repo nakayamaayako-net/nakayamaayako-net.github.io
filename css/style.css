@@ -7,6 +7,13 @@
     font-family: 'Calisto MT', -apple-system,Segoe UI,Helvetica Neue,Hiragino Kaku Gothic ProN,"メイリオ",meiryo,sans-serif;
     font-family: 'Noto Serif JP', serif;
 }
+html{
+	background-image: linear-gradient(0deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px)),
+                    linear-gradient(90deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px));
+  background-size: 16px 16px;
+  background-repeat: repeat;
+  background-position: center center;
+}
 html,
 body{
     /* height: auto;
@@ -16,6 +23,7 @@ body{
     background: #f0d8d8;
     color: #e6004d;
     animation: fadein 1s forwards;
+	
 }
 @keyframes fadein {
 	0% {opacity: 0.5}
