@@ -197,6 +197,7 @@ document.addEventListener("DOMContentLoaded", function () {
       loop: true, // 無限ループ
       autoplay: true,         //自動再生
       autoplaySpeed: 3,
+      speed: 2500,
       spaceBetween: 20, // スライド間のスペース
       navigation: {
           nextEl: ".swiper-button-next",
