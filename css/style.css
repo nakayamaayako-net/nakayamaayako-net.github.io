@@ -7,7 +7,6 @@
     font-family: 'Calisto MT', -apple-system,Segoe UI,Helvetica Neue,Hiragino Kaku Gothic ProN,"メイリオ",meiryo,sans-serif;
     font-family: 'Noto Serif JP', serif;
 }
-.top,
 .profile,
 .hello{
 	background-image: linear-gradient(0deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px)),
