@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded", function () {
             delay: 2500, // 3秒ごとに自動再生
             disableOnInteraction: false 
         },
-        speed: 2500,
+        speed: 1000,
         spaceBetween: 20,
         navigation: {
             nextEl: ".swiper-button-next",
