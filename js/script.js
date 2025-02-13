@@ -195,6 +195,8 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const swiper = new Swiper(".mySwiper", {
       loop: true, // 無限ループ
+      autoplay: true,         //自動再生
+      autoplaySpeed: 3,
       spaceBetween: 20, // スライド間のスペース
       navigation: {
           nextEl: ".swiper-button-next",
