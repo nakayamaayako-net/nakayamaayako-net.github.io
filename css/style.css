@@ -277,8 +277,9 @@ footer{
     text-align: center;
 }
 .hello{
+	padding: 20px 0;
 	font-size: 120%;
-	line-height: 3.2em;
+	line-height: 4.2em;
 }
 .hello .wide.mini{
 	font-size: 390%;
