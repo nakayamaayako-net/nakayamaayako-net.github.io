@@ -193,61 +193,64 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const swiper = new Swiper(".mySwiper", {
-      loop: true, // 無限ループ
-      autoplay: true,         //自動再生
-      autoplaySpeed: 3,
-      speed: 2500,
-      spaceBetween: 20, // スライド間のスペース
-      navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
-      },
-      pagination: {
-          el: ".swiper-pagination",
-          clickable: true
-      }
-  });
+    const swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: { 
+            delay: 3000, // 3秒ごとに自動再生
+            disableOnInteraction: false 
+        },
+        speed: 2500,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        }
+    });
 
-  // 画像クリックイベント
-  document.querySelectorAll(".swiper-slide img").forEach(img => {
-      img.addEventListener("click", () => {
-          console.log(`クリックされた画像: ${img.src}`);
-      });
-  });
-});
+    // 画像クリックイベント
+    document.querySelectorAll(".swiper-slide img").forEach(img => {
+        img.addEventListener("click", () => {
+            console.log(`クリックされた画像: ${img.src}`);
+        });
+    });
 
+    // 画面内に入ったらスライダーを動かす
+    function triggerScroll(targetObj, swiperInstance) {
+        let targetFlag = false;
+        let $window = $(window);
 
-function triggerScroll(targetObj) {
-    let targetFlag = false;
-    let $window = $(window);
+        function checkVisibility() {
+            let scrollTop = $window.scrollTop();
+            let scrollBottom = scrollTop + $window.height();
+            let targetTop = targetObj.offset().top;
+            let targetBottom = targetTop + targetObj.height();
 
-    function checkVisibility() {
-        let scrollTop = $window.scrollTop();
-        let scrollBottom = scrollTop + $window.height();
-        let targetTop = targetObj.offset().top;
-        let targetBottom = targetTop + targetObj.height();
-
-        if (scrollBottom > targetTop && scrollTop < targetBottom) {
-            if (!targetFlag) {
-                targetObj.slick('slickPlay');
-                targetFlag = true;
-            }
-        } else {
-            if (targetFlag) {
-                targetObj.slick('slickPause');
-                targetFlag = false;
+            if (scrollBottom > targetTop && scrollTop < targetBottom) {
+                if (!targetFlag) {
+                    swiperInstance.autoplay.start(); // Swiperの自動再生開始
+                    targetFlag = true;
+                }
+            } else {
+                if (targetFlag) {
+                    swiperInstance.autoplay.stop(); // Swiperの自動再生停止
+                    targetFlag = false;
+                }
             }
         }
+
+        // 初回実行
+        checkVisibility();
+
+        // スクロール時にチェック
+        $window.on('scroll', checkVisibility);
     }
 
-    // Initial check on load
-    checkVisibility();
-
-    // Check on scroll
-    $window.on('scroll', checkVisibility);
-}
-
-$(document).ready(function() {
-    triggerScroll($('#slider'));
+    // Swiperのオートプレイ制御を追加
+    $(document).ready(function() {
+        triggerScroll($('.mySwiper'), swiper);
+    });
 });
