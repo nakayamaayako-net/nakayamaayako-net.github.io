@@ -216,3 +216,38 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
+
+
+function triggerScroll(targetObj) {
+    let targetFlag = false;
+    let $window = $(window);
+
+    function checkVisibility() {
+        let scrollTop = $window.scrollTop();
+        let scrollBottom = scrollTop + $window.height();
+        let targetTop = targetObj.offset().top;
+        let targetBottom = targetTop + targetObj.height();
+
+        if (scrollBottom > targetTop && scrollTop < targetBottom) {
+            if (!targetFlag) {
+                targetObj.slick('slickPlay');
+                targetFlag = true;
+            }
+        } else {
+            if (targetFlag) {
+                targetObj.slick('slickPause');
+                targetFlag = false;
+            }
+        }
+    }
+
+    // Initial check on load
+    checkVisibility();
+
+    // Check on scroll
+    $window.on('scroll', checkVisibility);
+}
+
+$(document).ready(function() {
+    triggerScroll($('#slider'));
+});
