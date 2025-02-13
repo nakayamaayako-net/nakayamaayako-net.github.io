@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const swiper = new Swiper(".mySwiper", {
         loop: true,
         autoplay: { 
-            delay: 3000, // 3秒ごとに自動再生
+            delay: 2500, // 3秒ごとに自動再生
             disableOnInteraction: false 
         },
         speed: 2500,
