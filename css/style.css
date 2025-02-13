@@ -682,3 +682,8 @@ footer{
 	.works .ki1{
 		top: 40px;
 	}
+	.profile .ki1,
+	profile .ki2{
+		left: 0!important;
+	}
+
