@@ -194,7 +194,8 @@ nav ul{
     background-color: #f0d8d8;
 }
 .profile,
-.hello{
+.hello,
+footer{
     position: relative;
 }
 .ki1,
