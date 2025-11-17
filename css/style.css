@@ -211,6 +211,7 @@ nav.pc ul li a {
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
+    padding: 0 40px;
 }
 
 .about-me {
@@ -262,7 +263,7 @@ nav.pc ul li a {
 .skills {
     display: flex;
     justify-content: space-between;
-    background-color: #f0f0f0;
+    background-color: #EFF0F2;
     padding: 40px;
 }
 
