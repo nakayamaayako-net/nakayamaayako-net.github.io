@@ -7,7 +7,7 @@
     font-family: Arial, YuGothic, "Yu Gothic", "游ゴシック", "游ゴシック体", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, sans-serif;
 }
 
-.profile,
+.about-me,
 .hello {
     background-image: linear-gradient(0deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px)),
         linear-gradient(90deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px));
@@ -271,14 +271,14 @@ nav ul {
     color: #4a4a4a;
 }
 
-.profile,
+.about-me,
 .kl-wrap {
     display: flex;
     justify-content: space-between;
     background-color: #f0d8d8;
 }
 
-.profile,
+.about-me,
 .hello,
 footer {
     position: relative;
@@ -291,13 +291,14 @@ footer {
     position: absolute;
 }
 
-.profile,
+.about-me,
 .works,
 .hello,
 .thanks {
     width: 100%;
     margin-top: 170px;
-    background-color: #f0d8d8;
+    background-color: #EFF0F2;
+    padding: 0 40px;
     /* height: 1800px; */
 }
 
@@ -328,7 +329,7 @@ footer {
     padding-top: 150px;
     height: 2000px;
 } */
-.profile h2,
+.about-me h2,
 .works h2,
 .thanks h2,
 .works-main h2 {
@@ -842,7 +843,7 @@ th:last-child {
 
     .sp,
     .menu.sp,
-    .profile,
+    .about-me,
     .kl-wrap,
     .works,
     .tab,
@@ -964,12 +965,12 @@ th:last-child {
         margin-bottom: 50px;
     }
 
-    .profile .ki1,
-    profile .ki2 {
+    .about-me .ki1,
+    .about-me .ki2 {
         left: 0 !important;
     }
 
-    .profile .ki2 {
+    .about-me .ki2 {
         left: 90px !important;
     }
 
