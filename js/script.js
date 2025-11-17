@@ -124,52 +124,52 @@ window.addEventListener('DOMContentLoaded', () => {
 
   'use strict'; /* 厳格にエラーをチェック */
 
-{ /* ローカルスコープ */
+// { /* ローカルスコープ */
 
-// DOM取得
-const tabMenus = document.querySelectorAll('.tab__menu-item');
-console.log(tabMenus);
+// // DOM取得
+// const tabMenus = document.querySelectorAll('.tab__menu-item');
+// console.log(tabMenus);
 
-// イベント付加
-tabMenus.forEach((tabMenu) => {
-  tabMenu.addEventListener('click', tabSwitch);
-})
+// // イベント付加
+// tabMenus.forEach((tabMenu) => {
+//   tabMenu.addEventListener('click', tabSwitch);
+// })
 
-// イベントの処理
-function tabSwitch(e) {
+// // イベントの処理
+// function tabSwitch(e) {
 
-  // クリックされた要素のデータ属性を取得
-  const tabTargetData = e.currentTarget.dataset.tab;
-  // クリックされた要素の親要素と、その子要素を取得
-  const tabList = e.currentTarget.closest('.tab__menu');
-  console.log(tabList);
-  const tabItems = tabList.querySelectorAll('.tab__menu-item');
-  console.log(tabItems);
-  // クリックされた要素の親要素の兄弟要素の子要素を取得
-  const tabPanelItems = tabList.
-  nextElementSibling.querySelectorAll('.tab__panel-box');
-  console.log(tabPanelItems);
+//   // クリックされた要素のデータ属性を取得
+//   const tabTargetData = e.currentTarget.dataset.tab;
+//   // クリックされた要素の親要素と、その子要素を取得
+//   const tabList = e.currentTarget.closest('.tab__menu');
+//   console.log(tabList);
+//   const tabItems = tabList.querySelectorAll('.tab__menu-item');
+//   console.log(tabItems);
+//   // クリックされた要素の親要素の兄弟要素の子要素を取得
+//   const tabPanelItems = tabList.
+//   nextElementSibling.querySelectorAll('.tab__panel-box');
+//   console.log(tabPanelItems);
 
-  // クリックされたtabの同階層のmenuとpanelのクラスを削除
-  tabItems.forEach((tabItem) => {
-    tabItem.classList.remove('is-active');
-  })
-  tabPanelItems.forEach((tabPanelItem) => {
-    tabPanelItem.classList.remove('is-show');
-  })
+//   // クリックされたtabの同階層のmenuとpanelのクラスを削除
+//   tabItems.forEach((tabItem) => {
+//     tabItem.classList.remove('is-active');
+//   })
+//   tabPanelItems.forEach((tabPanelItem) => {
+//     tabPanelItem.classList.remove('is-show');
+//   })
 
-  // クリックされたmenu要素にis-activeクラスを付加
-  e.currentTarget.classList.add('is-active');
-  // クリックしたmenuのデータ属性と等しい値を持つパネルにis-showクラスを付加
-  tabPanelItems.forEach((tabPanelItem) => {
-    if (tabPanelItem.dataset.panel ===  tabTargetData) {
-      tabPanelItem.classList.add('is-show');
-    }
-  })
+//   // クリックされたmenu要素にis-activeクラスを付加
+//   e.currentTarget.classList.add('is-active');
+//   // クリックしたmenuのデータ属性と等しい値を持つパネルにis-showクラスを付加
+//   tabPanelItems.forEach((tabPanelItem) => {
+//     if (tabPanelItem.dataset.panel ===  tabTargetData) {
+//       tabPanelItem.classList.add('is-show');
+//     }
+//   })
 
-}
+// }
 
-}
+// }
 
 document.addEventListener("DOMContentLoaded", function () {
   const targets = document.querySelectorAll(".frame-in");
@@ -192,65 +192,135 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const swiper = new Swiper(".mySwiper", {
-        loop: true,
-        autoplay: { 
-            delay: 2000, // 3秒ごとに自動再生
-            disableOnInteraction: false 
-        },
-        speed: 1000,
-        spaceBetween: 20,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true
-        }
-    });
+// document.addEventListener("DOMContentLoaded", function () {
+//     const swiper = new Swiper(".mySwiper", {
+//         loop: true,
+//         autoplay: { 
+//             delay: 2000, // 3秒ごとに自動再生
+//             disableOnInteraction: false 
+//         },
+//         speed: 1000,
+//         spaceBetween: 20,
+//         navigation: {
+//             nextEl: ".swiper-button-next",
+//             prevEl: ".swiper-button-prev"
+//         },
+//         pagination: {
+//             el: ".swiper-pagination",
+//             clickable: true
+//         }
+//     });
 
-    // 画像クリックイベント
-    document.querySelectorAll(".swiper-slide img").forEach(img => {
-        img.addEventListener("click", () => {
-            console.log(`クリックされた画像: ${img.src}`);
-        });
-    });
+//     // 画像クリックイベント
+//     document.querySelectorAll(".swiper-slide img").forEach(img => {
+//         img.addEventListener("click", () => {
+//             console.log(`クリックされた画像: ${img.src}`);
+//         });
+//     });
 
-    // 画面内に入ったらスライダーを動かす
-    function triggerScroll(targetObj, swiperInstance) {
-        let targetFlag = false;
-        let $window = $(window);
+//     // 画面内に入ったらスライダーを動かす
+//     function triggerScroll(targetObj, swiperInstance) {
+//         let targetFlag = false;
+//         let $window = $(window);
 
-        function checkVisibility() {
-            let scrollTop = $window.scrollTop();
-            let scrollBottom = scrollTop + $window.height();
-            let targetTop = targetObj.offset().top;
-            let targetBottom = targetTop + targetObj.height();
+//         function checkVisibility() {
+//             let scrollTop = $window.scrollTop();
+//             let scrollBottom = scrollTop + $window.height();
+//             let targetTop = targetObj.offset().top;
+//             let targetBottom = targetTop + targetObj.height();
 
-            if (scrollBottom > targetTop && scrollTop < targetBottom) {
-                if (!targetFlag) {
-                    swiperInstance.autoplay.start(); // Swiperの自動再生開始
-                    targetFlag = true;
-                }
-            } else {
-                if (targetFlag) {
-                    swiperInstance.autoplay.stop(); // Swiperの自動再生停止
-                    targetFlag = false;
-                }
+//             if (scrollBottom > targetTop && scrollTop < targetBottom) {
+//                 if (!targetFlag) {
+//                     swiperInstance.autoplay.start(); // Swiperの自動再生開始
+//                     targetFlag = true;
+//                 }
+//             } else {
+//                 if (targetFlag) {
+//                     swiperInstance.autoplay.stop(); // Swiperの自動再生停止
+//                     targetFlag = false;
+//                 }
+//             }
+//         }
+
+//         // 初回実行
+//         checkVisibility();
+
+//         // スクロール時にチェック
+//         $window.on('scroll', checkVisibility);
+//     }
+
+//     // Swiperのオートプレイ制御を追加
+//     $(document).ready(function() {
+//         triggerScroll($('.mySwiper'), swiper);
+//     });
+// });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = document.querySelectorAll(".gallery img");
+            const modal = document.getElementById("modal");
+            const modalImage = document.getElementById("modalImage");
+            const captionText = document.getElementById("caption");
+            const prevButton = document.getElementById("prev");
+            const nextButton = document.getElementById("next");
+            let currentIndex = 0;
+            
+            function openModal(index) {
+                modalImage.src = images[index].src;
+                captionText.textContent = images[index].dataset.caption;
+                modal.classList.add("active");
+                currentIndex = index;
             }
-        }
+            
+            images.forEach((img, index) => {
+                img.addEventListener("click", function () {
+                    openModal(index);
+                });
+            });
+            
+            modal.addEventListener("click", function (event) {
+                if (event.target === modal || event.target === modalImage) {
+                    modal.classList.remove("active");
+                }
+            });
+            
+            prevButton.addEventListener("click", function (event) {
+                event.stopPropagation();
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                openModal(currentIndex);
+            });
+            
+            nextButton.addEventListener("click", function (event) {
+                event.stopPropagation();
+                currentIndex = (currentIndex + 1) % images.length;
+                openModal(currentIndex);
+            });
+            
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add("visible");
+                        }, index * 200);
+                    }
+                });
+            }, { threshold: 0.2 });
+            
+            images.forEach(img => {
+                observer.observe(img);
+            });
+        });
 
-        // 初回実行
-        checkVisibility();
-
-        // スクロール時にチェック
-        $window.on('scroll', checkVisibility);
-    }
-
-    // Swiperのオートプレイ制御を追加
-    $(document).ready(function() {
-        triggerScroll($('.mySwiper'), swiper);
-    });
+document.addEventListener("DOMContentLoaded", function () {
+    const worksBoxes = document.querySelectorAll(".works-box");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add("fade-in");
+                }, index * 1000); // 1秒間隔でアニメーションを開始
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    worksBoxes.forEach(box => observer.observe(box));
 });
