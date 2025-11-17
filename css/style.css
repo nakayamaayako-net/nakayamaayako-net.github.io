@@ -57,12 +57,35 @@ a {
 }
 
 header {
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 85%;
     max-width: 1600px;
     position: fixed;
-    padding-top: 220px;
-    /* padding-left: 20px; */
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 20px 0;
+    z-index: 10;
+}
+
+.logo h1 a {
+    font-size: 24px;
+    color: #4a4a4a;
+    text-decoration: none;
+}
+
+nav.pc ul {
+    display: flex;
+    gap: 30px;
+}
+
+nav.pc ul li a {
+    font-size: 18px;
+    color: #7f7f7f;
+    text-decoration: none;
 }
 
 /* .logo{
@@ -218,14 +241,29 @@ nav ul {
 }
 
 .top {
-    height: calc(100vh - 125px);
-    padding-top: 400px;
-    text-align: right;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 10%;
 }
 
 .top h2 {
-    font-size: 22px;
-    padding: 10px;
+    font-size: 72px;
+    color: #4a4a4a;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.top h2 .blue {
+    color: #4285f4; /* Google Blue */
+}
+
+.top p {
+    font-size: 18px;
+    color: #4a4a4a;
 }
 
 .profile,
