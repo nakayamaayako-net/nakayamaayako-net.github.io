@@ -23,7 +23,7 @@ body {
     width: 100%; */
     margin: 0 auto;
     scroll-behavior: smooth;
-    background: #f0d8d8;
+    background: #EFF0F2;
     color: #e6004d;
     animation: fadein 1s forwards;
 
@@ -258,7 +258,7 @@ nav ul {
 }
 
 .top h2 .blue {
-    color: #4285f4; /* Google Blue */
+    color: #4772AB; /* Google Blue */
 }
 
 .top p {
