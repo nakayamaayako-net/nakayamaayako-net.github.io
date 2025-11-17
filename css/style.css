@@ -94,6 +94,27 @@ nav.pc ul li a {
     transition: 0.5s;
 }
 
+.profile-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-circle {
+    width: 20px;
+    height: 20px;
+    background-color: #4772AB;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-title h3 {
+    font-size: 24px;
+    color: #4a4a4a;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
 .hamburger {
     display: none;
     margin: 40px;
@@ -186,9 +207,15 @@ nav.pc ul li a {
     color: #4a4a4a;
 }
 
-.about-me {
+.profile-content {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.about-me {
+    display: block;
+    /* Changed from flex to block as content inside is wrapped in .profile-content */
     background-color: #EFF0F2;
     margin-top: 170px;
     padding: 0 40px;
@@ -197,10 +224,34 @@ nav.pc ul li a {
 
 .pr-l {
     width: 45%;
+    padding-left: 40px;
+}
+
+.pr-l h2 {
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+    color: #4a4a4a;
+    letter-spacing: 0.1rem;
+    margin-bottom: 20px;
+}
+
+.pr-l p {
+    font-size: 18px;
+    color: #4a4a4a;
+    margin-bottom: 5px;
 }
 
 .pr-r {
     width: 55%;
+    padding-right: 40px;
+    text-align: left;
+}
+
+.pr-r p {
+    font-family: YuGothic, "Yu Gothic", "游ゴシック", "游ゴシック体", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, sans-serif;
+    font-size: 16px;
+    color: #4a4a4a;
+    line-height: 1.8;
 }
 
 .about-me h2,
@@ -210,7 +261,26 @@ nav.pc ul li a {
 }
 
 .skills {
-    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 40px;
+}
+
+.skills-category {
+    width: 48%;
+}
+
+.skills-category h4 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+    letter-spacing: 0.1rem;
+}
+
+.skill-item {
+    margin-bottom: 20px;
 }
 
 .skill-info {
@@ -218,6 +288,8 @@ nav.pc ul li a {
     justify-content: space-between;
     font-size: 16px;
     line-height: 1.5;
+    color: #4a4a4a;
+    margin-bottom: 5px;
 }
 
 .skill-percentage {
@@ -229,8 +301,9 @@ nav.pc ul li a {
     position: relative;
     width: 100%;
     height: 15px;
-    background-color: #f3f3f3;
+    background-color: #dcdcdc;
     overflow: hidden;
+    border-radius: 5px;
 }
 
 .skill-bar {
@@ -239,8 +312,9 @@ nav.pc ul li a {
     left: 0;
     height: 100%;
     width: 0;
-    background-color: #e6004d;
+    background-color: #4772AB;
     transition: width 3s cubic-bezier(0.22, 1, 0.36, 1);
+    border-radius: 5px;
 }
 
 .works,
