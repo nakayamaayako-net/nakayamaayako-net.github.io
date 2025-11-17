@@ -218,13 +218,12 @@ nav.pc ul li a {
     /* Changed from flex to block as content inside is wrapped in .profile-content */
     background-color: #EFF0F2;
     margin-top: 170px;
-    padding: 0 40px;
+
     position: relative;
 }
 
 .pr-l {
     width: 45%;
-    padding-left: 40px;
 }
 
 .pr-l h2 {
