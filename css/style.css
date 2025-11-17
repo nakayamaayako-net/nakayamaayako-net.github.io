@@ -188,6 +188,7 @@ nav.pc ul li a {
     justify-content: center;
     align-items: flex-start;
     text-align: left;
+    width: 85%;
 }
 
 .top h2 {
