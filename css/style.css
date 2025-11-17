@@ -783,6 +783,10 @@ th:last-child {
     border-bottom: 3px solid;
     margin-bottom: 20px;
     padding-bottom: 10px;
+<<<<<<< HEAD
+=======
+    text-align: center;
+>>>>>>> a62259dc6a5283ffd3aa8edff300c26ab59e81b1
 }
 .works-box p{
     font-size: 110%;
