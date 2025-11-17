@@ -4,8 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Calisto MT', -apple-system, Segoe UI, Helvetica Neue, Hiragino Kaku Gothic ProN, "メイリオ", meiryo, sans-serif;
-    font-family: 'Noto Serif JP', serif;
+    font-family: Arial, YuGothic, "Yu Gothic", "游ゴシック", "游ゴシック体", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, sans-serif;
 }
 
 .profile,
@@ -72,6 +71,7 @@ header {
 }
 
 .logo h1 a {
+    font-family: Arial, sans-serif;
     font-size: 24px;
     color: #4a4a4a;
     text-decoration: none;
@@ -83,6 +83,7 @@ nav.pc ul {
 }
 
 nav.pc ul li a {
+    font-family: Arial, sans-serif;
     font-size: 18px;
     color: #7f7f7f;
     text-decoration: none;
@@ -251,6 +252,7 @@ nav ul {
 }
 
 .top h2 {
+    font-family: Arial, sans-serif;
     font-size: 72px;
     color: #4a4a4a;
     line-height: 1.2;
